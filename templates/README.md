@@ -7,8 +7,8 @@ The day came when I was bored of programming always the same shit! If you felt t
 
 Right now the utilities are divided as follows:
 
-+ file_utils: read and write all files in different ways.
-+ os_utils: create, remove and list files and folders, get system date...
-+ http_utils: make http requests and retrieve data.
++ `file_utils`: read and write all files in different ways.
++ `os_utils`: create, remove and list files and folders, get system date...
++ `http_utils`: make http requests and retrieve data.
 
 Enjoy your time programming for fun and profit, and stop wasting your time with boring tasks!
