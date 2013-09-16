@@ -14,7 +14,7 @@ Installation
 
 If you have the libraries mentioned in the previous section, you don't have to do anything. If not, is as simple as:
 
-   pip install -r requirements.txt
+    $ pip install -r requirements.txt
 
 The requirements.txt file is in the main project directory. If you have any problem using pip (you might have to use *sudo*), install the libraries as explained in the their webpages. It's easy ;)
 
@@ -23,13 +23,13 @@ Usage
 
 Here comes the magic of argparse :)
 
-    Beleriand:rent_first newlog$ ./main.py -h
+    $ ./main.py -h
     usage: main.py [-h] [-e {fotocasa.es,idealista.com}] [-minp MINPRICE]
                [-maxp MAXPRICE] [-mins MINSIZE] [-f] [-l LIMIT]
                [-op OUTPUT_PATH] [-cf CONFIG_FILE]
 
-    Launch parameterized queries to different house renting sites and get house
-    photos and important information such as price, size or rooms.
+    Launch parameterized queries to different house renting sites and 
+    get house photos and important information such as price, size or rooms.
 
     optional arguments:
       -h, --help            show this help message and exit
@@ -51,7 +51,7 @@ Here comes the magic of argparse :)
 
 An example to launch the script follows:
 
-    ./main.py -e fotocasa.es -minp 600 -maxp 700 -mins 60 -f
+    $ ./main.py -e fotocasa.es -minp 600 -maxp 700 -mins 60 -f
 
 This query will create the next directory structure:
 
