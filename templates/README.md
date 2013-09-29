@@ -10,5 +10,6 @@ Right now the utilities are divided as follows:
 + `file_utils`: read and write all files in different ways.
 + `os_utils`: create, remove and list files and folders, get system date...
 + `http_utils`: make http requests and retrieve data.
++ `arg_utils`: usage of the argparse library. How to handle command-line args.
 
 Enjoy your time programming for fun and profit, and stop wasting your time with boring tasks!
