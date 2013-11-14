@@ -11,5 +11,6 @@ Right now the utilities are divided as follows:
 + `os_utils`: create, remove and list files and folders, get system date...
 + `http_utils`: make http requests and retrieve data.
 + `arg_utils`: usage of the argparse library. How to handle command-line args.
++ `testing_utils`: simple template for unittesting. Pretty basic.
 
 Enjoy your time programming for fun and profit, and stop wasting your time with boring tasks!
