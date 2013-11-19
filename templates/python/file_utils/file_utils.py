@@ -53,7 +53,7 @@ class ProcessFile(object):
             return
         try:
             with open(self.filepath, "wb") as f:
-                f.write(lines)
+                f.write(binary)
         except (IOError, OSError) as e:
             print("[-] File could not be read: %s" % e)
             success = False
