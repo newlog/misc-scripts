@@ -119,6 +119,9 @@ nnoremap <F3> :set nonumber!<CR>:set foldcolumn=0<CR>
 " Gardener cs
 " set background=dark
 colorscheme molokai
+" this setting MUST be set here. If not, background 
+" and comments will have the same color
+set background=dark
 
 " For powerline plugin
 "let Powerline_symbols = 'unicode'
