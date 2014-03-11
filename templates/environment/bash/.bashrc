@@ -114,6 +114,7 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+# mine: for tmux+vim+molokai¬                                                                                                                               alias tmux="TERM=screen-256color-bce tmux"
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
