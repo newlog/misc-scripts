@@ -1,12 +1,9 @@
 " Sample .vimrc file by Martin Brochhaus
 " Presented at PyCon APAC 2012
 
-
-" ============================================
-" Note to myself:
-" DO NOT USE <C-z> FOR SAVING WHEN PRESENTING!
-" ============================================
-
+" information sources:
+" https://github.com/mbrochh/vim-as-a-python-ide
+" http://unlogic.co.uk/2013/02/08/vim-as-a-python-ide/
 
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
