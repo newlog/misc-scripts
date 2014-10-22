@@ -8,6 +8,6 @@ of configuring again and again.
 + `vim`: The vimrc definition and definition of the directory structure, in addition to the colorscheme files. Lot of customization from several sources. Final result: awesome :)
 + `vim-python`: A fully vim configuration to implement a Python IDE. Plugins: python-mode, jedi-vim, ctrl-p, vim-powerline.
 + `tmux`: Tmux configuration file. Some handy shortcuts, such as using - and | to split into panes.
-+ `powershell`: PowerShell configuration file. Something similar to the bashrc prompt format.
++ `powershell`: PowerShell configuration file. Something similar to the bashrc prompt format. The WindowsPowerShell folder must be palced in the user's Documents directory. 
 
 
