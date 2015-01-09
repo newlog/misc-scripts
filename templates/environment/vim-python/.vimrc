@@ -136,6 +136,9 @@ set smartcase
 "" set noswapfile
 
 
+" Add this to correct some problems if using fish shell
+set shell=/bin/sh 
+
 " Setup Pathogen to manage your plugins
 " mkdir -p ~/.vim/autoload ~/.vim/bundle
 " curl -so ~/.vim/autoload/pathogen.vim https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim
@@ -149,10 +152,15 @@ call pathogen#infect()
 " Settings for vim-go in general
 " cd ~/.vim/bundle
 " git clone https://github.com/fatih/vim-go.git
-syntax enable  
-filetype plugin on  
-set number  
-let g:go_disable_autoinstall = 0 
+"syntax enable  
+"filetype plugin on  
+"set number  
+"let g:go_disable_autoinstall = 0 
+filetype off
+filetype plugin indent off
+"set runtimepath+=$GOROOT/misc/vim
+filetype plugin indent on
+syntax on
 
 " Settings for NERDTree
 " cd ~/.vim/bundle
