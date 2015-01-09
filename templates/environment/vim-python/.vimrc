@@ -142,6 +142,24 @@ set smartcase
 " Now you can install any plugin into a .vim/bundle/plugin-name/ folder
 call pathogen#infect()
 
+" ============================================================================
+" Go IDE Setup (vim-go pathogen plugin)
+" ============================================================================
+
+" Settings for vim-go in general
+" cd ~/.vim/bundle
+" git clone https://github.com/fatih/vim-go.git
+syntax enable  
+filetype plugin on  
+set number  
+let g:go_disable_autoinstall = 0 
+
+" Settings for NERDTree
+" cd ~/.vim/bundle
+" git clone ttps://github.com/scrooloose/nerdtree.git
+" This will map ctrl+n to show/hide file tree 
+map <C-n> :NERDTreeToggle<CR>
+
 
 " ============================================================================
 " Python IDE Setup
