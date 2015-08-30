@@ -117,9 +117,10 @@ Host="\h"
 DirName="\W"
 PathShort="\w"
 DebianChroot="${debian_chroot:+($debian_chroot)}"
-GitMagic="$(echo `git status` | grep "nothing to commit">/dev/null 2>&1; \
-if [ "$?" -eq "0" ]; then echo $IGreen"\$(__git_ps1)"; \
-else echo $IRed"\$(__git_ps1)"; fi)"
+GitMagic="git status 2>&1 | grep \"nothing to commit\">/dev/null 2>&1; \
+if [ \$? = 0 ]; then echo \"$IGreen\"; \
+else echo \"$IRed\"; fi"
+Branch="echo \"\$(__git_ps1)\";"
 #[/MINE]
 
 # set a fancy prompt (non-color, unless we know we "want" color)
@@ -148,7 +149,7 @@ fi
 if [ "$color_prompt" = yes ]; then
     #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
     # [MINE]
-    PS1="$DebianChroot$Green[$FullHour]$Yellow $User@$Host:$Cyan$DirName$GitMagic$Color_Off\$ "
+    PS1="$DebianChroot$Green[$FullHour]$Yellow $User@$Host:$Cyan$DirName\`$GitMagic\`\`$Branch\`$Color_Off\$ "
     # [/MINE]
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\W\$ '
