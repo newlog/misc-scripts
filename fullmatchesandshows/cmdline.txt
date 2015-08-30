@@ -1,0 +1,3 @@
+./download_game.py http://www.fullmatchesandshows.com/2015/05/30/athletic-bilbao-vs-barcelona-highlights-full-match/ -d 2
+./download_game.py http://www.fullmatchesandshows.com/2015/05/30/athletic-bilbao-vs-barcelona-highlights-full-match/ -d 2 -a 0
+curl http://cdn.phoenix.intergi.com/21772/videos/3807151/video-sd.mp4 > 1era.mp4
