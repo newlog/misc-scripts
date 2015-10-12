@@ -110,6 +110,10 @@ On_IPurple="\[\033[10;95m\]"  # Purple
 On_ICyan="\[\033[0;106m\]"    # Cyan
 On_IWhite="\[\033[0;107m\]"   # White
 
+if [ -f "/usr/local/git/contrib/completion/git-prompt.sh" ]; then
+    source /usr/local/git/contrib/completion/git-prompt.sh
+fi
+
 # utils:
 FullHour="\t"
 User="\u"
