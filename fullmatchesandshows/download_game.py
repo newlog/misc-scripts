@@ -4,6 +4,7 @@ import argparse
 import re
 import subprocess
 import os
+import json
 
 visited_links = []
 correct_pattern_links = []
@@ -47,7 +48,7 @@ def get_all_website_links(url, ignore):
 def find_pattern_links(pattern, links):
     pattern_links = []
     for link in links:
-        if link.endswith(pattern):
+        if pattern in link:
             print('[+] Correct pattern link found: {0}'.format(link))
             pattern_links.append(link)
             correct_pattern_links.append(link)
@@ -63,7 +64,7 @@ def is_valid_domain(url, domains):
     return valid_domain
 
 def handle_recursion(website_links, correct_links, depth, ignore, pattern, domains):
-    if correct_links or depth == 0:
+    if depth == 0:
         return correct_links
     else:
         for link in website_links:
@@ -79,6 +80,39 @@ def parse_web(url, pattern, depth=2, ignore='', domains=''):
     return []
 
 def build_final_urls(links):
+    final_urls = []
+    for link in links:
+        json_objects = parse_remote_json(link)
+        print_json_object(json_objects)
+    return final_urls
+
+def print_json_object(json_object):
+    if type(json_object) == list:
+        for j_object in json_object:
+            print_json_object(j_object)
+    elif json_object.get('settings'):
+        print_filtered_title(json_object['settings']['title'])
+    elif json_object.get('title'):
+        print_filtered_title(json_object['title'])
+    else:
+        print_filtered_title(json_object)
+
+def print_filtered_title(title):
+    title_lower = title.lower()
+    if 'bar-' in title_lower or '-bar' in title_lower or 'barcelona' in title_lower:
+        print title
+
+def parse_remote_json(url):
+    json_content = {}
+    try:
+        res = requests.get('http:' + url)
+        #print res.content
+        json_content = json.loads(res.content)
+    except:
+        pass
+    return json_content
+
+def build_final_urls2(links):
     final_urls = []
     for link in links:
         try:
