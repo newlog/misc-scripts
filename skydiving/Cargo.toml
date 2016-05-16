@@ -1,0 +1,7 @@
+[package]
+name = "skydiving"
+version = "0.1.0"
+authors = ["newlog <newlog@overflowedminds.net>"]
+
+[dependencies]
+hyper = "0.9.4"
