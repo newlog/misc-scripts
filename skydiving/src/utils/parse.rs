@@ -10,3 +10,7 @@ pub fn get_image_links(html: &str) -> Vec<String> {
     }
     v
 }
+
+pub fn get_name_from_image_link(image_link: &str) -> String {
+    image_link.split("/").last().unwrap().to_owned()
+}
