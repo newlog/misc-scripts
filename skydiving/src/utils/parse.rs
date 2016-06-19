@@ -6,7 +6,9 @@ pub fn get_image_links(html: &str) -> Vec<String> {
     let document = Document::from(html);
     for node in document.find(Name("img")).iter() {
         let link = node.attr("src").unwrap().to_owned();
-        v.push(link);
+        if !v.contains(&link) {
+            v.push(link);
+        }
     }
     v
 }

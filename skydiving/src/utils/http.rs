@@ -18,8 +18,10 @@ pub fn get_bytes(url: &str) -> hyper::Result<Bytes<Response>> {
     Ok(response.bytes())
 }
 
-pub fn get_response(url: &str) -> hyper::Result<Response> {
+pub fn get_response(url: &str) -> Response {
     let client = Client::new();
-    let response = try!(client.get(url).send());
-    Ok(response)
+    match client.get(url).send() {
+        Err(why) => panic!("Request to {} was not successful. Error: {}", url, why),
+        Ok(response) => response,
+    }
 }
