@@ -14,7 +14,7 @@ fn download_images(image_links: Vec<String>) {
 }
 
 fn main() {
-    let html_source = utils::http::get_source("http://www.meneame.net").unwrap();
+    let html_source = utils::http::get_source("").unwrap();
     let image_links = utils::parse::get_image_links(&html_source);
     println!("{} images found:", image_links.len());
     download_images(image_links)
