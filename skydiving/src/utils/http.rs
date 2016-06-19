@@ -1,6 +1,5 @@
 use hyper;
 use std::io::Read;
-use std::io::Bytes;
 use hyper::{Client};
 use hyper::client::response::Response;
 
