@@ -48,3 +48,6 @@ nosetests.xml
 
 # project related files
 results
+
+# rust
+target

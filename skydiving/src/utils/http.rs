@@ -12,12 +12,6 @@ pub fn get_source(url: &str) -> hyper::Result<String> {
     Ok(buf)
 }
 
-pub fn get_bytes(url: &str) -> hyper::Result<Bytes<Response>> {
-    let client = Client::new();
-    let response = try!(client.get(url).send());
-    Ok(response.bytes())
-}
-
 pub fn get_response(url: &str) -> Response {
     let client = Client::new();
     match client.get(url).send() {
